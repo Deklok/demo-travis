@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+- 8
+before_install:
+- npm i -g firebase-tools
+cache:
+  directories:
+  - node_modules
+script:
+- yarn run build
+deploy:
+  provider: firebase
+  project: fir-travis-e5cd9
+  skip_cleanup: true 
+env:
+  global:
+    secure: VrNL8CC5Nls6kkOXLtv3J/VcK0bdNloaHpYHJ17UxL/T88qUHer9JY1Yv1ZTmNmdVNa14SbtQsU2NbtFZCxTx7jVztRfRY5IEKQyZjVFn1rehT3r/b36BcrnkIGDMslBIqvgdq7zaztWUSpA2WA2Ag96m6Re8rHsHVVieIQkwBMjPq6EGgZJKSr/X5Cs6v7zq5XzYRqMpuPI2z/rqVpHB0f5gqznfFdGHHqhhJmtiCo5gfDMtp7agpi6JOClx0iyCSyr8afuU6WiNTHjHeQRbv9VEM0OBlJlO/BiqqHmfZaAoB6+qbQJ62gUSeJqmPVOxEdoozHfsy8bSBv6nQ38Hu0hhCme1EDHW8KRhmAh4jLI8wFGsSi/hw1q+9w0qCxp0vfqoh+3duuSzLGY/Vdb2+6HvK2DqDr0pKiHMfr1sP14SClkkutJUJLU/241H4cSSqTOVgVjyJ+fnqo66nLwHZz2brHzdpoe+ghDBFE4punlxoCp7HL1gwH7oZXKKl3B0K4xpWPIb+IySkFlOXma+kzuJQcVNrW9n12wxXNbVBQjLSKEylCaD6zun9GDEztwaf4g9TGXODsB3+vuDc5zIWRxOTQl/GPcHfOxc+WyNBUn7yfoH4AhQKrRfeAlAlbNiOX/waCYD17ZGwti08mQdg3l3UHg17GsQRLxU6hCjew=
